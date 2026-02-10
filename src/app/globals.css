@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+:root {
+  --gradient-start: #3B82F6;
+  --gradient-end: #6366F1;
+}
+
+body {
+  @apply bg-gray-950 text-gray-100 antialiased;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500 bg-clip-text text-transparent;
+}
+
+.gradient-bg {
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500;
+}
+
+.gradient-border {
+  @apply border border-transparent bg-gradient-to-r from-blue-500 to-indigo-500;
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.card {
+  @apply bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl;
+}
+
+.btn-primary {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-200;
+  @apply bg-gradient-to-r from-blue-500 to-indigo-500;
+  @apply hover:from-blue-600 hover:to-indigo-600;
+  @apply hover:shadow-lg hover:shadow-blue-500/25;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-200;
+  @apply bg-gray-800 border border-gray-700;
+  @apply hover:bg-gray-700 hover:border-gray-600;
+}
+
+.input-field {
+  @apply w-full px-4 py-3 rounded-xl bg-gray-800/50 border border-gray-700;
+  @apply focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+  @apply placeholder-gray-500 transition-all duration-200;
+}
+
+.select-field {
+  @apply w-full px-4 py-3 rounded-xl bg-gray-800/50 border border-gray-700;
+  @apply focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500;
+  @apply text-gray-100 transition-all duration-200 cursor-pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-700 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-600;
+}
